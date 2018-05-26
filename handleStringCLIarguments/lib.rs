@@ -3,12 +3,12 @@ fn handle_arguments() -> Result<String,String> {
         Some(command) => {
             match command.as_str() {
                 "expected" => {
-                    Err ( log_stub (format!("Command \"expected\" is not implemented")) );
+                    Err ( "{}", log_stub (format!("Command \"expected\" is not implemented")) );
                 }
             }
         },
         None => {
-            Err( log_stub(format!("No command received. {}", recommend_help_stub())) );
+            Err( "{}", log_stub(format!("No command received. {}", recommend_help_stub())) );
         },
     };
 }
